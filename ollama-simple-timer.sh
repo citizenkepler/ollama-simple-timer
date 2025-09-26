@@ -9,14 +9,14 @@ DWELL=3
 
 usage() {
     cat <<EOF
-Usage: $0 -n REPS -d DWELL-o OUTFILE -p PROMPT -m MODEL 
+Usage: $0 -n REPS -d DWELL -m MODEL -p PROMPT -o OUTFILE
 
 Options:
   -n REPS     Number of repetitions per model (default: $REPS)
-  -o OUTFILE  Output CSV file (default: output.YYYY.MM.DD.hh.mm.ss.csv)
-  -p PROMPT   Prompt text to send into each ollama run (default: "$PROMPT")
-  -m MODEL    Test only this specific model (default: all models from 'ollama list')
   -d SEC      Dwell time in seconds between tests (default $DWELL)
+  -m MODEL    Test only this specific model (default: all models from 'ollama list')
+  -p PROMPT   Prompt text to send into each ollama run (default: "$PROMPT")
+  -o OUTFILE  Output CSV file (default: output.YYYY.MM.DD.hh.mm.ss.csv)
   -h          Show this help and exit
 
 Notes:

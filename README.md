@@ -1,15 +1,15 @@
 # Ollama Simple Timmer 
-A simple script that times how long each of the installed  ollama models takes to respond to a prompt
+A simple script that times how long each of the installed ollama models takes to respond to a prompt
 
 ```
-Usage: ./llm_perfy.sh -n REPS -o OUTFILE -p PROMPT -m MODEL
+Usage: ./ollama-simple-timer.sh -n REPS -d DWELL -m MODEL -p PROMPT -o OUTFILE
 
 Options:
   -n REPS     Number of repetitions per model (default: 3)
-  -o OUTFILE  Output CSV file (default: output.YYYY.MM.DD.hh.mm.ss.csv)
-  -p PROMPT   Prompt text to send into each ollama run (default: "Describe Yourself")
-  -m MODEL    Test only this specific model (default: all models from 'ollama list')
   -d SEC      Dwell time in seconds between tests (default 3)
+  -m MODEL    Test only this specific model (default: all models from 'ollama list')
+  -p PROMPT   Prompt text to send into each ollama run (default: "Describe Yourself")
+  -o OUTFILE  Output CSV file (default: output.YYYY.MM.DD.hh.mm.ss.csv)
   -h          Show this help and exit
 
 Notes:
